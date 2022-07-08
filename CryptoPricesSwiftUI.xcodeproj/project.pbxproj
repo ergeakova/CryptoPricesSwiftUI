@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		C06D38722878B19500FF593D /* CryptoPricesSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06D38712878B19500FF593D /* CryptoPricesSwiftUIApp.swift */; };
-		C06D38742878B19500FF593D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06D38732878B19500FF593D /* ContentView.swift */; };
+		C06D38742878B19500FF593D /* CryptosListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06D38732878B19500FF593D /* CryptosListView.swift */; };
 		C06D38762878B19A00FF593D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06D38752878B19A00FF593D /* Assets.xcassets */; };
 		C06D38792878B19A00FF593D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06D38782878B19A00FF593D /* Preview Assets.xcassets */; };
+		C06D38842878E3DE00FF593D /* CriptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06D38832878E3DE00FF593D /* CriptoCurrency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C06D386E2878B19500FF593D /* CryptoPricesSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoPricesSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06D38712878B19500FF593D /* CryptoPricesSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPricesSwiftUIApp.swift; sourceTree = "<group>"; };
-		C06D38732878B19500FF593D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C06D38732878B19500FF593D /* CryptosListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptosListView.swift; sourceTree = "<group>"; };
 		C06D38752878B19A00FF593D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C06D38782878B19A00FF593D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C06D38832878E3DE00FF593D /* CriptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoCurrency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,11 @@
 		C06D38702878B19500FF593D /* CryptoPricesSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				C06D38822878E02100FF593D /* Service */,
+				C06D38812878E01500FF593D /* ViewModel */,
+				C06D38802878E00C00FF593D /* View */,
+				C06D387F2878DFFE00FF593D /* Model */,
 				C06D38712878B19500FF593D /* CryptoPricesSwiftUIApp.swift */,
-				C06D38732878B19500FF593D /* ContentView.swift */,
 				C06D38752878B19A00FF593D /* Assets.xcassets */,
 				C06D38772878B19A00FF593D /* Preview Content */,
 			);
@@ -65,6 +70,36 @@
 				C06D38782878B19A00FF593D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C06D387F2878DFFE00FF593D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C06D38832878E3DE00FF593D /* CriptoCurrency.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C06D38802878E00C00FF593D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C06D38732878B19500FF593D /* CryptosListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C06D38812878E01500FF593D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C06D38822878E02100FF593D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +172,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C06D38742878B19500FF593D /* ContentView.swift in Sources */,
+				C06D38742878B19500FF593D /* CryptosListView.swift in Sources */,
 				C06D38722878B19500FF593D /* CryptoPricesSwiftUIApp.swift in Sources */,
+				C06D38842878E3DE00FF593D /* CriptoCurrency.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
