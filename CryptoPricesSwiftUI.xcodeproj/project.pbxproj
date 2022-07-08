@@ -13,6 +13,7 @@
 		C06D38792878B19A00FF593D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06D38782878B19A00FF593D /* Preview Assets.xcassets */; };
 		C06D38842878E3DE00FF593D /* CriptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06D38832878E3DE00FF593D /* CriptoCurrency.swift */; };
 		C06D38862878E91F00FF593D /* CryptoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06D38852878E91F00FF593D /* CryptoService.swift */; };
+		C06D38882878EFE400FF593D /* CryptoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06D38872878EFE400FF593D /* CryptoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		C06D38782878B19A00FF593D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C06D38832878E3DE00FF593D /* CriptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoCurrency.swift; sourceTree = "<group>"; };
 		C06D38852878E91F00FF593D /* CryptoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoService.swift; sourceTree = "<group>"; };
+		C06D38872878EFE400FF593D /* CryptoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		C06D38812878E01500FF593D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C06D38872878EFE400FF593D /* CryptoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				C06D38742878B19500FF593D /* CryptosListView.swift in Sources */,
 				C06D38722878B19500FF593D /* CryptoPricesSwiftUIApp.swift in Sources */,
 				C06D38842878E3DE00FF593D /* CriptoCurrency.swift in Sources */,
+				C06D38882878EFE400FF593D /* CryptoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
