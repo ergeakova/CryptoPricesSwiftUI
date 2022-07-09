@@ -8,9 +8,29 @@
 import SwiftUI
 
 struct CryptosListView: View {
+    @ObservedObject var crptos: CryptoListViewModel
+    
+    init(){
+        crptos = CryptoListViewModel()
+    }
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView{
+            List(crptos.crtptoList, id:\.id){ crpto in
+                VStack{
+                    Text(crpto.asset_id)
+                        .font(.title3)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Text(String(crpto.price_usd))
+                        .font(.title3)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                }
+            }.navigationTitle("Cryptos")
+        }.onAppear {
+            crptos.downloadCryptos(url: URL(string:"https://rest.coinapi.io/v1/assets?filter_asset_id=BTC,ETC,XRP,LTC,NMC,USDT,DOGE,NVC,FTC,PPC,TRC,KST,TOR,NMC,NXT")!, key: "YOUR_API_KEY")
+        }
     }
 }
 

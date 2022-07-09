@@ -13,7 +13,7 @@ class CryptoService {
         
         var request = URLRequest(url: url)
             request.httpMethod = "GET"
-            request.setValue(key, forHTTPHeaderField: "x")
+            request.setValue(key, forHTTPHeaderField: "X-CoinAPI-Key")
            
         
         URLSession.shared.dataTask(with: request) { data, response, error in
