@@ -13,18 +13,14 @@ class CryptoListViewModel: ObservableObject{
     let service = CryptoService()
     @Published var crtptoList = [CryptoViewModel]()
     
-    func downloadCryptos(url: URL, key: String){
-        service.downloadCurrencies(url: url, key: key) { result in
-            switch result {
-                case .failure(let error):
-                    print(error)
-            case .success(let cryptos):
-                if let cryptos = cryptos{
-                    DispatchQueue.main.async {
-                        self.crtptoList = cryptos.map(CryptoViewModel.init)
-                    }
-                }
+    func downloadCryptosAsync(url: URL, key: String) async {
+        do{
+            let cryptos = try await service.downloadCurrenciesAsync(url: url, key: key)
+            DispatchQueue.main.async {
+                self.crtptoList = cryptos.map(CryptoViewModel.init)
             }
+        }catch{
+            print(error.localizedDescription)
         }
     }
 }
