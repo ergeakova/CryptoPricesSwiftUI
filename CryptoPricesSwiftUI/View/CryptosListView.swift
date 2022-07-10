@@ -27,7 +27,13 @@ struct CryptosListView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
                 }
-            }.navigationTitle("Cryptos")
+            }.toolbar(content: {
+                Button{
+                    Task.init{
+                        await crptos.downloadCryptosAsync(url: URL(string:"https://rest.coinapi.io/v1/assets?filter_asset_id=BTC,ETC,XRP,LTC,NMC,USDT,DOGE,NVC,FTC,PPC,TRC,KST,TOR,NMC,NXT")!, key: "YOUR_API_KEY")
+                    }
+                }label: { Text("Refresh") }
+            }).navigationTitle("Cryptos")
         }.task {
             await crptos.downloadCryptosAsync(url: URL(string:"https://rest.coinapi.io/v1/assets?filter_asset_id=BTC,ETC,XRP,LTC,NMC,USDT,DOGE,NVC,FTC,PPC,TRC,KST,TOR,NMC,NXT")!, key: "YOUR_API_KEY")
         }

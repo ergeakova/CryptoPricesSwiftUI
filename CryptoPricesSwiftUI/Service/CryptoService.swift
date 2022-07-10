@@ -14,7 +14,7 @@ class CryptoService {
             request.httpMethod = "GET"
             request.setValue(key, forHTTPHeaderField: "X-CoinAPI-Key")
     
-        let (data, res ) = try await URLSession.shared.data(for: request)
+        let (data, response ) = try await URLSession.shared.data(for: request)
         let currencies = try? JSONDecoder().decode([CryptoCurrency].self,from: data)
         return currencies ?? []
     }
